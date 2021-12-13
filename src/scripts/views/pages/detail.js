@@ -1,3 +1,6 @@
+import UrlParser from '../../routes/url-parser';
+import RestaurantDbSource from '../../data/restaurant-source';
+
 const Detail = {
   async render() {
     return `
@@ -6,7 +9,9 @@ const Detail = {
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
+    const url = UrlParser.parseActiveUrlWithoutCombiner();
+    const movie = await RestaurantDbSource.detailMovie(url.id);
+    console.log(movie);
   },
 };
 
