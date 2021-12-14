@@ -1,7 +1,7 @@
 import UrlParser from '../../routes/url-parser';
 import RestaurantDbSource from '../../data/restaurant-source';
 import {
-  createMovieDetailTemplate, createDetailFood, createDetailDrink, createDetailReview,
+  createDetailTemplate, createDetailFood, createDetailDrink, createDetailReview,
 } from '../templates/template-creator';
 
 const Detail = {
@@ -19,7 +19,7 @@ const Detail = {
     const { customerReviews } = detail.restaurant;
 
     const movieContainer = document.querySelector('#movie');
-    movieContainer.innerHTML += createMovieDetailTemplate(detail);
+    movieContainer.innerHTML += createDetailTemplate(detail);
     movieContainer.innerHTML += await createDetailFood(foods);
     movieContainer.innerHTML += await createDetailDrink(drinks);
     movieContainer.innerHTML += await createDetailReview(customerReviews);

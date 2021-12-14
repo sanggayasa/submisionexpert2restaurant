@@ -4,7 +4,7 @@
 /* eslint-disable no-unused-expressions */
 import CONFIG from '../../globals/config';
 
-const createMovieDetailTemplate = (detail) => `
+const createDetailTemplate = (detail) => `
   <h2 class="movie__title">${detail.restaurant.name}</h2>
   <img class="movie__poster" src="${CONFIG.BASE_IMAGE_URL + detail.restaurant.pictureId}" alt="${detail.restaurant.title}" />
   <div class="movie__info">
@@ -20,7 +20,7 @@ const createMovieDetailTemplate = (detail) => `
   </div>
 `;
 
-const createMovieItemTemplate = (restaurant) => `
+const createItemTemplate = (restaurant) => `
   <div class="movie-item">
     <div class="movie-item__header">
         <img class="movie-item__header__poster" alt="${restaurant.title}"
@@ -64,5 +64,5 @@ const createDetailReview = (customerReviews) => {
 };
 
 export {
-  createMovieItemTemplate, createMovieDetailTemplate, createDetailFood, createDetailDrink,createDetailReview
+  createItemTemplate, createDetailTemplate, createDetailFood, createDetailDrink,createDetailReview
 };

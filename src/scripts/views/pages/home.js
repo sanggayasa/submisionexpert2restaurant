@@ -1,5 +1,5 @@
 import RestaurantDbSource from '../../data/restaurant-source';
-import { createMovieItemTemplate } from '../templates/template-creator';
+import { createItemTemplate } from '../templates/template-creator';
 
 const Home = {
   async render() {
@@ -20,7 +20,7 @@ const Home = {
     const movies = await RestaurantDbSource.nowPlayingMovies();
     const moviesContainer = document.querySelector('#movies');
     movies.forEach((restaurant) => {
-      moviesContainer.innerHTML += createMovieItemTemplate(restaurant);
+      moviesContainer.innerHTML += createItemTemplate(restaurant);
     });
   },
 };
