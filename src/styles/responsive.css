@@ -1,5 +1,13 @@
 @media screen and (min-width: 650px) {
-  .app-bar {
+    .hero {
+    background-image: url("/hero-image_4.jpg");
+    height: 100%;
+    max-height: 400px;
+    max-width: 1200px;
+    margin: 0px auto;
+    }
+  
+    .app-bar {
       grid-template-columns: 1fr auto;
       padding: 8px 32px;
   }

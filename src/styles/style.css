@@ -161,7 +161,29 @@ main {
   -webkit-line-clamp: 4; /* number of lines to show */
   -webkit-box-orient: vertical;
 }
- 
+
+/* HERO */
+.hero {
+  background-image: url("/hero-image_4.jpg");
+  height: 100%;
+  max-height: 400px;
+  max-width: 1200px;
+  margin: 0px -32px;
+}
+
+.hero_judul {
+  color: white;
+  text-align: center;
+  padding-top: 120px;
+  font-size: 50px;
+}
+
+.hero_desc {
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 20px;
+}
  
 /*
   Movie

@@ -1,15 +1,27 @@
 import RestaurantDbSource from '../../data/restaurant-source';
+import { createMovieItemTemplate } from '../templates/template-creator';
 
 const Home = {
   async render() {
     return `
-      <h2>Home</h2>
+      <div class="hero">
+            <p tabindex="0" class="hero_judul">RESTORAN TERBAIK SAAT INI </p>
+            <P tabindex="0" class="hero_desc">Pilih sesukamu , nikmati kelezataanya </P>
+      </div>
+      <div class="content">
+        <div id="movies" class="movies">
+ 
+        </div>
+      </div>
     `;
   },
 
   async afterRender() {
     const movies = await RestaurantDbSource.nowPlayingMovies();
-    console.log(movies);
+    const moviesContainer = document.querySelector('#movies');
+    movies.forEach((restaurant) => {
+      moviesContainer.innerHTML += createMovieItemTemplate(restaurant);
+    });
   },
 };
 

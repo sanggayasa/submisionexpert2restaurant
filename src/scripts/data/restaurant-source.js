@@ -4,7 +4,6 @@ class RestaurantDbSource {
   static async nowPlayingMovies() {
     const response = await fetch(API_ENDPOINT.NOW_PLAYING);
     const responseJson = await response.json();
-    console.log(responseJson);
     return responseJson.restaurants;
   }
 
