@@ -17,10 +17,10 @@ const Home = {
   },
 
   async afterRender() {
-    const movies = await RestaurantDbSource.homeRestaurants();
-    const moviesContainer = document.querySelector('#movies');
-    movies.forEach((restaurant) => {
-      moviesContainer.innerHTML += createItemTemplate(restaurant);
+    const restaurants = await RestaurantDbSource.homeRestaurants();
+    const restaurantsContainer = document.querySelector('#movies');
+    restaurants.forEach((restaurant) => {
+      restaurantsContainer.innerHTML += createItemTemplate(restaurant);
     });
   },
 };
