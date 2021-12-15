@@ -8,7 +8,7 @@ const Upcoming = {
   },
 
   async afterRender() {
-    const movies = await RestaurantDbSource.upcomingMovies();
+    const movies = await RestaurantDbSource.upcomingRestaurants();
     console.log(movies);
   },
 };
