@@ -1,11 +1,5 @@
 @media screen and (min-width: 650px) {
-    .hero {
-    background-image: url("/hero-image_4.jpg");
-    height: 100%;
-    max-height: 400px;
-    max-width: 1200px;
-    margin: 0px auto;
-    }
+    
   
     .app-bar {
       grid-template-columns: 1fr auto;
@@ -36,20 +30,20 @@
       margin: 0;
   }
  
-  .movies {
+  .restaurants {
       grid-template-columns: 1fr 1fr;
   }
  
-  .movie {
+  .restaurant {
       grid-template-columns: auto 1fr;
   }
  
-  .movie .movie__title {
+  .restaurant .restaurant__title {
       grid-column-start: 1;
       grid-column-end: 3;
   }
  
-  .movie .movie__overview {
+  .restaurant .restaurant__overview {
       grid-column-start: 1;
       grid-column-end: 3;
   }
@@ -62,19 +56,27 @@
 }
  
 @media screen and (min-width: 850px) {
-  .movies {
+  .restaurants {
       grid-template-columns: repeat(3, 1fr);
   }
 }
  
 @media screen and (min-width: 1200px) {
-  .movies {
+  .restaurants {
       grid-template-columns: repeat(4, 1fr);
   }
+
+  .hero {
+    background-image: url("/hero-image_4.jpg");
+    height: 100%;
+    max-height: 400px;
+    max-width: 1000px;
+    margin: 0px auto;
+    }
 }
  
 @media screen and (min-width: 1600px) {
-  .movies {
+  .restaurants {
       grid-template-columns: repeat(5, 1fr);
   }
 }

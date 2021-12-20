@@ -9,7 +9,7 @@ const Home = {
             <P tabindex="0" class="hero_desc">Pilih sesukamu , nikmati kelezataanya </P>
       </div>
       <div class="content">
-        <div id="movies" class="movies">
+        <div id="restaurants" class="restaurants">
  
         </div>
       </div>
@@ -18,7 +18,7 @@ const Home = {
 
   async afterRender() {
     const restaurants = await RestaurantDbSource.homeRestaurants();
-    const restaurantsContainer = document.querySelector('#movies');
+    const restaurantsContainer = document.querySelector('#restaurants');
     restaurants.forEach((restaurant) => {
       restaurantsContainer.innerHTML += createItemTemplate(restaurant);
     });

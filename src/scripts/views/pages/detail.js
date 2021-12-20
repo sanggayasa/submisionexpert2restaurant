@@ -9,7 +9,7 @@ import LikeButtonInitiator from '../../utils/like-button-initiator';
 const Detail = {
   async render() {
     return `
-      <div id="movie" class="movie"></div>
+      <div tabindex="0" id="restaurant" class="restaurant"></div>
       <div id="likeButtonContainer"></div>
     `;
   },
@@ -21,11 +21,11 @@ const Detail = {
     const { foods, drinks } = detail.restaurant.menus;
     const { customerReviews } = detail.restaurant;
 
-    const movieContainer = document.querySelector('#movie');
-    movieContainer.innerHTML += createDetailTemplate(detail);
-    movieContainer.innerHTML += await createDetailFood(foods);
-    movieContainer.innerHTML += await createDetailDrink(drinks);
-    movieContainer.innerHTML += await createDetailReview(customerReviews);
+    const restaurantContainer = document.querySelector('#restaurant');
+    restaurantContainer.innerHTML += createDetailTemplate(detail);
+    restaurantContainer.innerHTML += await createDetailFood(foods);
+    restaurantContainer.innerHTML += await createDetailDrink(drinks);
+    restaurantContainer.innerHTML += await createDetailReview(customerReviews);
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       resto: {

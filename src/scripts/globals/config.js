@@ -1,10 +1,10 @@
 const CONFIG = {
   BASE_URL: 'https://restaurant-api.dicoding.dev/',
   BASE_IMAGE_URL: 'https://restaurant-api.dicoding.dev/images/small/',
-  CACHE_NAME: new Date().toISOString(),
-  DATABASE_NAME: 'movie-catalogue-database',
+  CACHE_NAME: 'RestaurantCatalogue-V1',
+  DATABASE_NAME: 'resto-catalogue-database',
   DATABASE_VERSION: 1,
-  OBJECT_STORE_NAME: 'movies',
+  OBJECT_STORE_NAME: 'resto',
 };
 
 export default CONFIG;
