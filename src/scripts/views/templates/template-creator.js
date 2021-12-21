@@ -23,7 +23,7 @@ const createDetailTemplate = (detail) => `
 const createItemTemplate = (restaurant) => `
   <div class="restaurant-item">
     <div class="restaurant-item__header">
-        <img class="restaurant-item__header__poster" alt="${restaurant.title}"
+        <img loading="lazy" width="100%" height="100%" class="restaurant-item__header__poster" alt="${restaurant.title}"
             src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}">
         <div class="restaurant-item__header__rating">
             <p>⭐️<span class="restaurant-item__header__rating__score">${restaurant.rating}</span></p>
